@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Sederhana Teori Graf</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Teori Graf - Mencari Jalur Terpendek</h1>
+        <canvas id="graphCanvas" width="600" height="400"></canvas>
+        <div class="controls">
+            <h2>Tambah Simpul dan Sisi</h2>
+            <label for="nodeName">Nama Simpul:</label>
+            <input type="text" id="nodeName">
+            <button onclick="addNode()">Tambah Simpul</button>
+            <br>
+            <label for="edgeStart">Dari:</label>
+            <input type="text" id="edgeStart">
+            <label for="edgeEnd">Ke:</label>
+            <input type="text" id="edgeEnd">
+            <label for="edgeWeight">Bobot:</label>
+            <input type="number" id="edgeWeight" min="1">
+            <button onclick="addEdge()">Tambah Sisi</button>
+            <br>
+            <label for="startNode">Simpul Awal:</label>
+            <input type="text" id="startNode">
+            <button onclick="findShortestPath()">Cari Jalur Terpendek</button>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
